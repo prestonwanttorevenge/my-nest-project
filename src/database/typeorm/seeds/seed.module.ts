@@ -10,8 +10,11 @@ import { RoleSeedModule } from './role/role-seed.module';
 import { ProductSeedModule } from './product/products-seed.module';
 import { PaymentMethodSeedModule } from './payment-method/payment-method-seed.module';
 
+import { DemoSeedModule } from './demo/demo-seed.module';
+
 @Module({
   imports: [
+    DemoSeedModule,
     RoleSeedModule,
     UserSeedModule,
     ProductSeedModule,

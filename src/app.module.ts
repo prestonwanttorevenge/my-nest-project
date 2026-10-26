@@ -24,6 +24,8 @@ import { InternalServerErrorExceptionFilter } from '@core/filters/internal-serve
 import { NotFoundExceptionFilter } from '@core/filters/not-found.filter';
 import { UnprocessableEntityExceptionFilter } from '@core/filters/unprocess-entity.filter';
 import { OrderModule } from '@modules/order/order.module';
+import { ProductModule } from './modules/product/product.module';
+import { PostModule } from './modules/post/post.module';
 
 @Module({
   imports: [
@@ -57,6 +59,8 @@ import { OrderModule } from '@modules/order/order.module';
         AcceptLanguageResolver,
       ],
     }),
+    ProductModule,
+    PostModule,
   ],
   controllers: [AppController, AuthController],
   providers: [

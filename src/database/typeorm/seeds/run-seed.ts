@@ -1,4 +1,5 @@
 import { NestFactory } from '@nestjs/core';
+import { DemoSeedService } from './demo/demo-seed.service';
 import { RoleSeedService } from './role/role-seed.service';
 import { UserSeedService } from './user/user-seed.service';
 import { SeedModule } from './seed.module';
@@ -16,6 +17,8 @@ const runSeed = async () => {
   await app.get(PaymentMethodSeedService).run();
 
   await app.get(ProductSeedService).run();
+
+  await app.get(DemoSeedService).run();
 
   await app.close();
 };

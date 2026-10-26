@@ -56,7 +56,7 @@ export class ErrorService {
 
   private combine(err_msg: string, i18n: I18nContext, errors: object[] = []) {
     console.log(errors);
-    return Object.assign(i18n.t(`errors.${err_msg}`), {});
+    return Object.assign(i18n?.t ? i18n.t(`errors.${err_msg}`) : err_msg, {});
   }
 
   private combineDev(err_msg: string, i18n: I18nContext, stackTrace: any) {
