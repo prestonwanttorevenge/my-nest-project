@@ -140,3 +140,16 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+## Tasks API
+
+The task endpoints are available under `/api/v1/tasks`. Apply the database
+migrations with `npm run typeorm:run-migration` before using them.
+
+| Method | Endpoint            | Description                                                                 |
+| ------ | ------------------- | --------------------------------------------------------------------------- |
+| POST   | `/api/v1/tasks`     | Create a task (`title` and `category` required; `description` optional)     |
+| GET    | `/api/v1/tasks`     | List tasks; optionally filter with `isCompleted=true\|false` and `category` |
+| GET    | `/api/v1/tasks/:id` | Get a task by UUID                                                          |
+| PATCH  | `/api/v1/tasks/:id` | Update any provided task fields                                             |
+| DELETE | `/api/v1/tasks/:id` | Delete a task (returns `204 No Content`)                                    |

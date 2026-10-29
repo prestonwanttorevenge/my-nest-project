@@ -26,6 +26,7 @@ import { UnprocessableEntityExceptionFilter } from '@core/filters/unprocess-enti
 import { OrderModule } from '@modules/order/order.module';
 import { ProductModule } from './modules/product/product.module';
 import { PostModule } from './modules/post/post.module';
+import { TasksModule } from './modules/tasks/tasks.module';
 
 @Module({
   imports: [
@@ -61,6 +62,7 @@ import { PostModule } from './modules/post/post.module';
     }),
     ProductModule,
     PostModule,
+    TasksModule,
   ],
   controllers: [AppController, AuthController],
   providers: [
